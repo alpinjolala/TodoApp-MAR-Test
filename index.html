@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-app</title>
+    <link rel="stylesheet" href="./Frontend/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1 class="title">#todo</h1>
+      <div class="tabs">
+        <nav class="nav">
+          <button class="tab-button" id="all-tab" data-tab="all">All</button>
+          <button class="tab-button" id="active-tab" data-tab="Active">
+            Active
+          </button>
+          <button class="tab-button" id="completed-tab" data-tab="Completed">
+            Completed
+          </button>
+        </nav>
+
+        <div class="tab" data-tab="all">
+          <input type="text" class="todo-input" placeholder="add details" />
+          <button class="todo-button" type="button">Add</button>
+          <div class="todo-container">
+            <ul class="todo-list"></ul>
+          </div>
+        </div>
+
+        <div class="tab" data-tab="Active">
+          <input
+            type="text"
+            class="todo-input input-active"
+            placeholder="add details"
+          />
+          <button class="todo-button active-button" type="button">Add</button>
+          <div class="todo-active-container">
+            <ul class="todo-list-active"></ul>
+          </div>
+        </div>
+
+        <div class="tab" data-tab="Completed">
+          <div class="todo-container">
+            <ul class="todo-completed-list"></ul>
+            <button class="delete-all">
+              <i class="fa fa-trash"></i> Delete all
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./Frontend/js/Index.js"></script>
+  </body>
+</html>

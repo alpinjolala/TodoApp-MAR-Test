@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+}
+
+.title {
+  text-align: center;
+  font-weight: 850;
+  padding-bottom: 38px;
+}
+
+.nav {
+  width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 10px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.tab-button {
+  text-decoration: none;
+  color: #333333;
+  background: none;
+  border: none;
+}
+
+.todo-input {
+  width: 470px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid #bdbdbd;
+  margin-top: 12px;
+  padding-left: 12px;
+  padding-top: 20px;
+  padding-bottom: 19px;
+}
+
+.trash-button {
+  line-height: 22px;
+  width: 24px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: #bdbdbd;
+  margin-left: auto;
+}
+
+.todo-list,
+.todo-list-active,
+.todo-completed-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+  padding-top: 25px;
+}
+
+.complete-input {
+  line-height: 22px;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.todo-button {
+  color: #ffffff;
+  line-height: 17px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 14px;
+  width: 100px;
+  height: 56px;
+  background: #2fbded;
+  border-radius: 6px;
+  offset: 0px, 2px;
+  cursor: pointer;
+}
+
+.fa-trash {
+  pointer-events: none;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.active {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 4px solid #2f80ed;
+}
+
+#active {
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 4px solid #2f80ed;
+}
+
+.tab {
+  display: none;
+}
+
+.button-active {
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 4px solid #2f80ed;
+  width: 80px;
+  justify-self: center;
+}
+
+.tab-active {
+  display: block;
+}
+
+.delete-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 40px;
+  background: #eb5757;
+  border-radius: 4px;
+  color: #ffffff;
+  gap: 5.5px;
+  position: relative;
+  margin-top: 30px;
+  top: 100%;
+  left: 80%;
+  border: transparent solid;
+}
+
+.delete-all i {
+  color: #ffffff;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    width: 350px;
+  }
+
+  .todo-input {
+    width: 225px;
+  }
+
+  .todo-button {
+    width: 80px;
+  }
+
+  .delete-all {
+    width: 90px;
+    left: 75%;
+  }
+}
